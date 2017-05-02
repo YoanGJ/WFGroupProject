@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>School Modules & Lecturers</h1>
+  
+  <tbody>
+    
+    <% @school_modules.each do |school_module| %>
+        <h3><%= school_module.code %> <%= school_module.name %></h3>
+        <h4>Current Lecturer</h4>
+            <% if school_module.lecturers.empty? %>
+                <td>--</td>
+            <% else %>
+                <td><%= school_module.lecturers.first.name %>  <%= school_module.lecturers.first.surname %> | </td>
+                <%= link_to 'Delete', delete_link_path(module_id: school_module.id) %>
+            <% end %>
+            
+        <h4>Lecturers available</h4>
+        <% @lecturers.each do |lecturer| %>
+            <% if !school_module.lecturers.empty? %>
+                <% if !school_module.lecturers.find_by(id: lecturer.id) %>
+                    <td><%= lecturer.name %> <%= lecturer.surname%> | </td>
+                    <%= link_to 'Select', validate_link_path(module_id: school_module.id, lecturer_id: lecturer.id) %>
+                    <br>
+                <% end %>
+            <% end %>
+        <% end %>
+        
+    <% end %>
+    
+  </tbody>

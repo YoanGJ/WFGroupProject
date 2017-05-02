@@ -1,0 +1,22 @@
+<% provide(:title, "Home") %>
+<div class="center jumbotron">
+    
+    <% if admin_logged_in? %>
+        <h1>Welcome</h1>
+        <h2>Admin<h2>
+    <% elsif student_logged_in? %>
+        <h1>Welcome</h1>
+        <h2><%= current_student.first_name %>  <%= current_student.last_name %><h2>
+    <% elsif lecturer_logged_in? %>
+        <h1>Welcome</h1>
+        <h2><%= current_lecturer.name %>  <%= current_lecturer.surname %><h2>
+    <% elsif module_admin_logged_in? %>
+        <h1>Welcome</h1>
+        <h2><%= current_module_admin.name %>  <%= current_module_admin.surname %><h2>
+    <% else %>
+        <h1>Welcome to the Grading App</h1>
+        <h2>Please <%= link_to 'log in', login_path %> to use the app</h2>
+    <% end %>
+    
+</div>
+

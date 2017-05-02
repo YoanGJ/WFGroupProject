@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Module Admins</h1>
+
+  <tbody>
+    <% @module_admins.each do |module_admin| %>
+      <tr>
+        <td><%= module_admin.name %></td>
+        <td><%= module_admin.surname %></td>
+        <td><%= module_admin.email %></td>
+        <td> | </td>
+        <td><%= link_to 'Show', module_admin %></td>
+        <td> | </td>
+        <td><%= link_to 'Destroy', destroy_it_module_admin_path(id: module_admin.id) %></td>
+        <br>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Module Admin', new_module_admin_path %>

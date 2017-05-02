@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lecturers</h1>
+
+  <tbody>
+    <% @lecturers.each do |lecturer| %>
+      <tr>
+        <td><%= lecturer.name %></td>
+        <td><%= lecturer.surname %></td>
+        <td><%= lecturer.email %></td>
+        <td> | </td>
+        <td><%= link_to 'Show', lecturer %></td>
+        <td> | </td>
+        <td><%= link_to 'Destroy', destroy_it_lecturer_path(id: lecturer.id) %></td>
+        <br>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lecturer', new_lecturer_path %>
