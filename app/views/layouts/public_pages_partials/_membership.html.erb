@@ -1,0 +1,9 @@
+<% provide(:title, @page.title) %>
+
+  <tbody>
+    <% @memberships.each do |membership| %>
+      <p><%= membership.title %></p>
+      <p><%= membership.price %></p>
+      <p><%= membership.description %></p>
+    <% end %>
+  </tbody>

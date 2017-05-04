@@ -1,0 +1,52 @@
+<%= form_for(gym_class) do |f| %>
+  <% if gym_class.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gym_class.errors.count, "error") %> prohibited this gym_class from being saved:</h2>
+
+      <ul>
+      <% gym_class.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :instructor_first_name %>
+    <%= f.text_field :instructor_first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :instructor_last_name %>
+    <%= f.text_field :instructor_last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :day %>
+    <%= f.text_field :day %>
+  </div>
+
+  <div class="field">
+    <%= f.label :start_time %>
+    <%= f.number_field :start_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :end_time %>
+    <%= f.number_field :end_time %>
+  </div>
+
+  <div class="field">
+    <%= f.label :starting_date %>
+    <%= f.number_field :starting_date %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

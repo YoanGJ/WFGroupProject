@@ -1,0 +1,14 @@
+<% provide(:title, @page.title) %>
+
+  <tbody>
+    <% @gym_classes.each do |gym_class| %>
+        <p><%= gym_class.name %></p>
+        <p><%= gym_class.description %></p>
+        <p><%= gym_class.instructor_first_name %></p>
+        <p><%= gym_class.instructor_last_name %></p>
+        <p><%= gym_class.day %></p>
+        <p><%= gym_class.start_time %></p>
+        <p><%= gym_class.end_time %></p>
+        <p><%= gym_class.starting_date %></p>
+    <% end %>
+  </tbody>

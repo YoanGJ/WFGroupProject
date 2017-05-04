@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170426195302) do
+ActiveRecord::Schema.define(version: 20170504001943) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,54 +22,42 @@ ActiveRecord::Schema.define(version: 20170426195302) do
     t.string   "password_digest"
   end
 
-  create_table "lecturers", force: :cascade do |t|
+  create_table "gym_classes", force: :cascade do |t|
     t.string   "name"
-    t.string   "surname"
-    t.string   "email"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "password_digest"
+    t.string   "instructor_first_name"
+    t.string   "instructor_last_name"
+    t.string   "day"
+    t.string   "start_time"
+    t.string   "end_time"
+    t.string   "starting_date"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "description"
   end
 
-  create_table "lecturers_school_modules", id: false, force: :cascade do |t|
-    t.integer "lecturer_id",      null: false
-    t.integer "school_module_id", null: false
-  end
-
-  create_table "module_admins", force: :cascade do |t|
-    t.string   "name"
-    t.string   "surname"
-    t.string   "email"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "password_digest"
-  end
-
-  create_table "school_modules", force: :cascade do |t|
-    t.string   "code"
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "student_id"
-    t.index ["student_id"], name: "index_school_modules_on_student_id", using: :btree
-  end
-
-  create_table "school_modules_students", id: false, force: :cascade do |t|
-    t.integer "student_id",       null: false
-    t.integer "school_module_id", null: false
-  end
-
-  create_table "students", force: :cascade do |t|
+  create_table "members", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "phone_number"
     t.string   "email"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
-    t.string   "password_digest"
-    t.integer  "school_module_id"
-    t.index ["school_module_id"], name: "index_students_on_school_module_id", using: :btree
+    t.string   "membership_number"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
-  add_foreign_key "school_modules", "students"
-  add_foreign_key "students", "school_modules"
+  create_table "memberships", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "price"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "pages", force: :cascade do |t|
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
 end

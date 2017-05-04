@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<!-- Home Page -->
+<% if @page.id == 1 %>
+    <%= render 'layouts/public_pages_partials/home' %>
+
+<!-- Membership Page -->
+<% elsif @page.id == 2 %>
+    <%= render 'layouts/public_pages_partials/membership' %>
+
+<!-- Class Page -->
+<% elsif @page.id == 3 %>
+    <%= render 'layouts/public_pages_partials/classes' %>
+
+<!-- Contact us Page -->
+<% elsif @page.id == 4 %>
+    <%= render 'layouts/public_pages_partials/contact_us' %>
+
+<% else %>
+    <%= render 'layouts/public_pages_partials/others' %>
+
+<% end %>

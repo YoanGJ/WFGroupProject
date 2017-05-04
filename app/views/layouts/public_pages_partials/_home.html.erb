@@ -1,0 +1,15 @@
+<% provide(:title, @page.title) %>
+<div class="center jumbotron">
+    
+    <% if admin_logged_in? %>
+        <h1>Welcome</h1>
+        <h2>Admin<h2>
+    <% else %>
+        <h1>Welcome to Griffitness</h1>
+        <h2>
+            Looking for a Dublin Health Club or Gym where you’ll get all the help
+            and advice you need to see maximum fitness and weight loss results?<br><br>
+            Then you’ll love Griffitness Dublin.
+        </h2>
+    <% end %>
+</div>
