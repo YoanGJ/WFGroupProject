@@ -1,0 +1,25 @@
+$(document).ready(function()
+{
+$('.main-nav ul li').hover(function() {
+  $('.main-nav ul li').removeClass('active');
+  $(this).addClass('active');
+});
+
+$('.main-nav ul li.active.home').click(function() {
+});
+
+$('body').vegas({
+    delay: 7000,
+    timer: false,
+    shuffle: true,
+    firstTransition: 'fade',
+    firstTransitionDuration: 5000,
+    transition: 'slideDown2',
+    transitionDuration: 2000,
+    slides: [
+        { src: '<%= asset_path('slide1.jpeg') %>' },
+        { src: '<%= asset_path('slide2.jpeg') %>' },
+        { src: '<%= asset_path('slide3.jpg') %>' }
+    ]
+});  
+});

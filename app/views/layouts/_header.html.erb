@@ -1,17 +1,14 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
     <div class="container">
-        <%= link_to "grading app", root_path, id: "logo" %>
+        <%= link_to "Griffitness", root_path, id: "logo" %>
         <nav>
           <ul class ="nav navbar-nav navbar-right">
-            <li><%= link_to Page.find_by(id: 1).title, Page.find_by(id: 1) %></li>
-            
+
             <% if admin_logged_in? %>
               <li><%= link_to "Pages", "#" %></li>
               <li><%= link_to "Log out", logout_path, method: "delete" %></li>
             <% else %>
-              <li><%= link_to Page.find_by(id: 2).title,  Page.find_by(id: 2) %></li>
-              <li><%= link_to Page.find_by(id: 3).title,  Page.find_by(id: 3) %></li>
-              <li><%= link_to Page.find_by(id: 4).title,  Page.find_by(id: 4) %></li>
+              <li><%= link_to "Admin", login_path %></li>
               <li><%= link_to "Other",  "#" %></li>
             <% end %>
               
