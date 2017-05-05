@@ -16,7 +16,7 @@
       <%= yield %>
    <nav class="main-nav">
     <ul>
-      <li class="home active">
+      <li class="home">
     <%= link_to Page.find_by(id: 1), :class => 'link-to-text-color',  :remote => true do %>
         <div class="icon fa fa-home fa-2x"></div>
       <% end %>

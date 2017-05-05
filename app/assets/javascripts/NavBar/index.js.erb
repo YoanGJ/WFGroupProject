@@ -22,4 +22,8 @@ $('body').vegas({
         { src: '<%= asset_path('slide3.jpg') %>' }
     ]
 });  
+
+$(document).on('turbolinks:load', function() {
+    $(".dropdown-toggle").dropdown();
+});
 });

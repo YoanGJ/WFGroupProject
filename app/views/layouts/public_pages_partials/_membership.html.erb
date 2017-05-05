@@ -1,9 +1,28 @@
 <% provide(:title, @page.title) %>
 
-  <tbody>
-    <% @memberships.each do |membership| %>
-      <p><%= membership.title %></p>
-      <p><%= membership.price %></p>
-      <p><%= membership.description %></p>
-    <% end %>
-  </tbody>
+  <div class="site__wrapper">
+      <% @memberships.each do |membership| %>
+      <div class="grid">
+          <div class="card">
+            <div class="card__image">
+              <img src="https://images.pexels.com/photos/45056/pexels-photo-45056.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb" alt="">
+
+              <div class="card__overlay card__overlay--blue">
+                <div class="card__overlay-content">
+                  <ul class="card__meta">
+                    <h2 style="margin-bottom: 80px;"><%= membership.title %></h2>
+                    <span>Price: <%= membership.price %></span>
+                    <span><%= membership.description %></span>
+                  </ul>
+
+                  <ul class="card__meta card__meta--last">
+                  </ul>   
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>		
+      <% end %>
+     
+
+</div>
