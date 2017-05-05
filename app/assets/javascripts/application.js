@@ -13,6 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require tinymce-jquery
 //= require turbolinks
 //= require_tree ./NavBar
 //= require_tree ./Vegas
+
+$(document).on('turbolinks:load', function() {
+    $(".dropdown-toggle").dropdown();
+});
