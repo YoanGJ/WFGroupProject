@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'
   get 'admin' => 'admin#index'
+  get 'destroy_it_membership' => 'memberships#destroy_it_membership'
 end
