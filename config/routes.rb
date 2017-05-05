@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :contact_posts
   resources :memberships
   resources :pages
   resources :gym_classes
