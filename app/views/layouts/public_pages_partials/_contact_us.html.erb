@@ -1,1 +1,62 @@
 <% provide(:title, @page.title) %>
+
+<body>
+  <form style="margin-top: 100px;">
+	    <h1>Should you have any questions, please do not hesitate to contact us :</h1>
+	    
+    <div class="contentform">
+    	<div id="sendmessage"> Your message has been sent successfully. Thank you. </div>
+
+
+    	<div class="leftcontact">
+
+            <div class="form-group">
+            <p>Name <span>*</span></p>
+            <span class="icon-case"><i class="fa fa-user"></i></span>
+				<input type="text" name="prenom" id="prenom" data-rule="required" data-msg="Please do not leave any field empty : 'Name'."/>
+                <div class="validation"></div>
+			</div>
+
+			<div class="form-group">
+			<p>E-mail <span>*</span></p>	
+			<span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+                <input type="email" name="email" id="email" data-rule="email" data-msg="Please do not leave any field empty : 'E-mail'."/>
+                <div class="validation"></div>
+			</div>	
+
+
+	</div>
+
+	<div class="rightcontact">	
+
+
+			<div class="form-group">
+			<p>Phone number <span>*</span></p>	
+			<span class="icon-case"><i class="fa fa-phone"></i></span>
+				<input type="text" name="phone" id="phone" data-rule="maxlen:10" data-msg="Please do not leave any field empty : 'Téléphone' (10 digits)."/>
+                <div class="validation"></div>
+			</div>
+
+
+			<div class="form-group">
+			<p>Subject <span>*</span></p>	
+			<span class="icon-case"><i class="fa fa-comment-o"></i></span>
+                <input type="text" name="sujet" id="sujet" data-rule="required" data-msg="Please do not leave any field empty : 'Subject'."/>
+                <div class="validation"></div>
+			</div>
+		
+	</div>
+			<div class="form-group">
+			<p>Message <span>*</span></p>
+			<span class="icon-case"><i class="fa fa-comments-o"></i></span>
+                <textarea name="message" rows="14" data-rule="required" data-msg="Please do not leave any field empty : 'Message'."></textarea>
+                <div class="validation"></div>
+			</div>	
+	</div>
+<button type="submit" class="bouton-contact">Send</button>
+	
+</form>	
+
+  
+</body>
+</html>

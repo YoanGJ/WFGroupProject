@@ -246,14 +246,20 @@ p {
 /* forms */
 
 input, textareas, select, .uneditable-input {
-  border:1px solid #bbb;
   width: 100%;
   mrgin-bottom: 15px;
   @include box_sizing;
 }
 
+textarea {
+  color: #222222;
+  font-size: 16px;
+}
+
 input {
   height: auto !important;
+  color: #222222;
+  font-size: 16px;
 }
 
 #error_explanation {
@@ -273,7 +279,7 @@ input {
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700);
 
-$main: #272e38;
+$main: #222222;
 $link: #606770;
 
 * {
@@ -283,7 +289,6 @@ $link: #606770;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
   color: #fff;
 }
 
@@ -328,12 +333,13 @@ a {
 .content .caption h1 {
   line-height: 60px;
   font-size: 60px;
+  font-weight: 300;
   text-align: left;
   text-decoration: none;
   text-transform: uppercase;
   text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
   margin-top : 120px;
-  margin-bottom: 80px;
+  margin-bottom: 210px;
 }
 .content .caption h1:first-of-type {
   letter-spacing: 0;
@@ -341,6 +347,7 @@ a {
 
 .content .caption h2 {
   margin-bottom: 120px;
+  font-weight: 200;
   font-size: 22px;
 }
 
@@ -363,7 +370,7 @@ a {
   list-style: none;
 }
 .content nav.main-nav ul li {
-  background: #272e38;
+  background: #222222;
   flex-grow: 1;
   text-align: center;
   font-size: 15px;
@@ -397,7 +404,7 @@ a {
   height: 0;
   border-style: solid;
   border-width: 0 20px 20px 20px;
-  border-color: transparent transparent #272e38 transparent;
+  border-color: transparent transparent #222222 transparent;
   margin: auto;
   top: -20px;
   left: 0;
@@ -423,7 +430,7 @@ a {
   left: 0;
   width: 100%;
   height: 115px; /*180*/
-  background: #272e38 /*#1a1f27*/;
+  background: #222222 /*#1a1f27*/;
   display: block;
   padding: 10px 0;
   transition: all .25s ease;
