@@ -16,3 +16,7 @@
 //= require tinymce-jquery
 //= require turbolinks
 //= require_tree .
+
+$(document).on('turbolinks:load', function() {
+    $(".dropdown-toggle").dropdown();
+});

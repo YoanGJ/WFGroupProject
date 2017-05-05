@@ -10,6 +10,7 @@ class PagesController < ApplicationController
   # GET /pages/1
   # GET /pages/1.json
   def show
+    @pages = Page.all
     @memberships = Membership.all
     @gym_classes = GymClass.all
   end
