@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
-  delete 'logout' => 'sessions#destroy'
+  get 'logout' => 'sessions#destroy'
   get 'admin' => 'admin#index'
 end
