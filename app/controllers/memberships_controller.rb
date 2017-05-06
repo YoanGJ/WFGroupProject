@@ -3,6 +3,13 @@ class MembershipsController < ApplicationController
 
   # GET /memberships
   # GET /memberships.json
+  
+  def destroy_it_membership
+    @membership = Membership.find_by(id: params[:id])
+    @membership.destroy
+    redirect_to memberships_path
+  end
+  
   def index
     @memberships = Membership.all
   end

@@ -1,6 +1,12 @@
 class PagesController < ApplicationController
   before_action :set_page, only: [:show, :edit, :update, :destroy]
 
+  def destroy_it_page
+    @page = Page.find_by(id: params[:id])
+    @page.destroy
+    redirect_to pages_path
+  end
+
   # GET /pages
   # GET /pages.json
   def index
@@ -31,7 +37,7 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @page.save
-        format.html { redirect_to @page, notice: 'Page was successfully created.' }
+        format.html { redirect_to new_page_path, notice: 'Page was successfully created.' }
         format.json { render :show, status: :created, location: @page }
       else
         format.html { render :new }
@@ -72,6 +78,6 @@ class PagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def page_params
-      params.require(:page).permit(:title, :description)
+      params.require(:page).permit(:title, :description, :description_two)
     end
 end
