@@ -36,6 +36,7 @@ form {
   overflow: hidden;
 }
 
+
 p span {
   color: #F00;
 }
@@ -104,6 +105,11 @@ i {
   min-height: 400px;
   max-height: 600px;
 }
+
+.contentform__class {
+  padding: 40px 30px;
+}
+
 
 .bouton-contact{
   background: #00fe9e;

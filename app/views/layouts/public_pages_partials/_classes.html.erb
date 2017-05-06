@@ -1,14 +1,38 @@
 <% provide(:title, @page.title) %>
 
   <tbody>
-    <% @gym_classes.each do |gym_class| %>
-        <p><%= gym_class.name %></p>
-        <p><%= gym_class.description %></p>
-        <p><%= gym_class.instructor_first_name %></p>
-        <p><%= gym_class.instructor_last_name %></p>
-        <p><%= gym_class.day %></p>
-        <p><%= gym_class.start_time %></p>
-        <p><%= gym_class.end_time %></p>
-        <p><%= gym_class.starting_date %></p>
-    <% end %>
-  </tbody>
+  <div class="site__wrapper__class"; style="margin-top: 70px;">
+      <% @gym_classes.each do |gym_class| %>
+      <div class="grid__class">
+          <div class="card">
+            <div class="card__image">
+              <% if gym_class.name == "BODYBUMP" %>
+            <img src="https://static.pexels.com/photos/295774/pexels-photo-295774.jpeg" alt="">
+              <% else %>
+            <img src="https://static.pexels.com/photos/28080/pexels-photo.jpg" alt="">
+              <% end %>
+              <div class="card__overlay card__overlay--blue">
+                <div class="card__overlay-content__class">
+                  <ul class="card__meta">
+                    <h2 style="margin-bottom: 6.5%; margin-top: 0px; font-weight: bold;"><%= gym_class.name %></h2>
+                      <span style="font-size:14px;"><%= gym_class.description %><br><br></span>
+                      <span style="font-size:15px;"><%= gym_class.instructor_first_name %></span>
+                      <span style="font-size:15px;"><%= gym_class.instructor_last_name %><br></span>
+                      <span style="font-size:15px; font-weight: bold;"><%= gym_class.day %></span>
+                      <span style="font-size:15px; font-weight: bold;"><%= gym_class.start_time %>pm to </span>
+                      <span style="font-size:15px; font-weight: bold;"><%= gym_class.end_time %>pm<br><br></span>
+                      <span style="font-size:15px; font-weight: bold; float:right;">starting date: <%= gym_class.starting_date %></span>
+                        <div class="button_class">Book Now</div>
+                          <!--redirect vers form avec comme arg gym_class.name par ex-->
+                  </ul>
+
+                  <ul class="card__meta card__meta--last">
+                  </ul>   
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <% end %>
+  </div>
+</tbody>

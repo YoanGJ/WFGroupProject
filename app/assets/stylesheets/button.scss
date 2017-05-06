@@ -1,0 +1,49 @@
+.button_class {
+  flex: 1 1 auto;
+  width: 30%;
+  height: 15%;
+  margin: 10px 0px 0px 0px;
+  padding: 5px;
+  border: 2px solid #f7f7f7;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow:hidden;
+  transition: .3s;
+  &:after {
+    position: absolute;
+    transition: .3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: #f7f7f7;
+  }
+  &:nth-of-type(2):after {
+    left: 0;
+  }
+  &:nth-of-type(3):after {
+    right: 0;
+    left: auto;
+  }
+  &:nth-of-type(4):after {
+    left: 0;
+    bottom: auto;
+    top: -3px;
+    width: 100%;
+  }
+  &:nth-of-type(5):after {
+    height: 120%;
+    left: -10%;
+    transform: skewX(15deg);
+    z-index: -1;
+  }
+  &:hover {
+    cursor: pointer;
+    &:after {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
