@@ -21,8 +21,7 @@
         <td><%= contact_post.email %></td>
         <td><%= contact_post.message %></td>
         <td><%= link_to 'Show', contact_post %></td>
-        <td><%= link_to 'Edit', edit_contact_post_path(contact_post) %></td>
-        <td><%= link_to 'Destroy', contact_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', destroy_it_contact_post_path(id: contact_post.id) %></td>
       </tr>
     <% end %>
   </tbody>
