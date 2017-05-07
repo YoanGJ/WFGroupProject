@@ -36,6 +36,14 @@ form {
   overflow: hidden;
 }
 
+.login__form {
+  border-radius: 5px;
+  max-width:700px;
+  width:100%;
+  margin: 5% auto;
+  background-color: #222222;
+  overflow: hidden;
+}
 
 p span {
   color: #F00;

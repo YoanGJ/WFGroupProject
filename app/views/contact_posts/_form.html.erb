@@ -2,62 +2,51 @@
 
 <body>
   <form style="margin-top: 100px;">
-	    <h1><%= @page.description %></h1>
+	    <h1>Should you have any questions, please do not hesitate to contact us :</h1>
 	    
-    <div class="contentform">
-    	<div id="sendmessage"> Your message has been sent successfully. Thank you. </div>
+			<div class="contentform">
+  	  	<div id="sendmessage"> Your message has been sent successfully. Thank you. </div>
+    			<div class="leftcontact">
+      			<div class="form-group">
+	      			<p>Name <span>*</span></p>
+            	<span class="icon-case"><i class="fa fa-user"></i></span>
+				    	<%= f.text_field :name %>
+               <div class="validation"></div>
+						</div>
 
+						<div class="form-group">
+							<p>E-mail <span>*</span></p>	
+							<span class="icon-case"><i class="fa fa-envelope-o"></i></span>
+              <%= f.email_field :email %>>
+              <div class="validation"></div>
+						</div>	
+					</div>
 
-    	<div class="leftcontact">
+					<div class="rightcontact">	
+						<div class="form-group">
+							<p>Phone number <span>*</span></p>	
+							<span class="icon-case"><i class="fa fa-phone"></i></span>
+							<%= f.text_field :phone %>
+              <div class="validation"></div>
+						</div>
 
-            <div class="form-group">
-            <p>Name <span>*</span></p>
-            <span class="icon-case"><i class="fa fa-user"></i></span>
-				    <%= f.text_field :name %>
-                <div class="validation"></div>
+						<div class="form-group">
+							<p>Subject <span>*</span></p>	
+							<span class="icon-case"><i class="fa fa-comment-o"></i></span>
+              <%= f.text_field :subject %>
+              <div class="validation"></div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<p>Message <span>*</span></p>
+						<span class="icon-case"><i class="fa fa-comments-o"></i></span>
+            <%= f.text_field :message %>
+            <div class="validation"></div>
+					</div>	
 			</div>
-
-			<div class="form-group">
-			<p>E-mail <span>*</span></p>	
-			<span class="icon-case"><i class="fa fa-envelope-o"></i></span>
-                <%= f.email_field :email %>>
-                <div class="validation"></div>
-			</div>	
-
-
-	</div>
-
-	<div class="rightcontact">	
-
-
-			<div class="form-group">
-			<p>Phone number <span>*</span></p>	
-			<span class="icon-case"><i class="fa fa-phone"></i></span>
-				<%= f.text_field :phone %>
-                <div class="validation"></div>
-			</div>
-
-
-			<div class="form-group">
-			<p>Subject <span>*</span></p>	
-			<span class="icon-case"><i class="fa fa-comment-o"></i></span>
-                <%= f.text_field :subject %>
-                <div class="validation"></div>
-			</div>
-		
-	</div>
-			<div class="form-group">
-			<p>Message <span>*</span></p>
-			<span class="icon-case"><i class="fa fa-comments-o"></i></span>
-                <%= f.text_field :message %>
-                <div class="validation"></div>
-			</div>	
-	</div>
-  <%= f.submit "SEND", class: "bouton-contact" %>
-	
-</form>	
-
-  
+  	<%= f.submit "SEND", class: "bouton-contact" %>
+	</form>	
 </body>
 
 <% end %>
