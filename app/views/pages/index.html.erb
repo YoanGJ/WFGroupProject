@@ -7,7 +7,7 @@
     <tr>
       <th>Title</th>
       <th>Show</th>
-      <th>Destroy</th>
+      <th>Edit</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +16,10 @@
     <% @pages.each do |page| %>
       <tr>
         <td><%= page.title %></td>
-        <td><%= link_to 'Show', page %></td>
-        <td><%= link_to 'Edit', edit_page_path(page) %></td>
+        <td><%= link_to 'Show', page, :class => 'link-to-text-color' %></td>
+        <td><%= link_to 'Edit', edit_page_path(page), :class => 'link-to-text-color' %></td>
         <% if page.id > 4 %>
-          <td><%= link_to 'Destroy', destroy_it_page_path(id: page.id) %></td>
+          <td><%= link_to 'Destroy', destroy_it_page_path(id: page.id), :class => 'link-to-text-color' %></td>
           <% end %>
       </tr>
     <% end %>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Page', new_page_path %>
+<%= link_to 'New Page', new_page_path, :class => 'link-to-text-color' %>

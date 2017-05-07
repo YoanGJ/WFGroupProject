@@ -27,8 +27,8 @@
             <td><%= contact_post.phone %></td>
             <td><%= contact_post.email %></td>
             <td><%= contact_post.message %></td>
-            <td><%= link_to 'Show', contact_post %></td>
-            <td><%= link_to 'Destroy', destroy_it_contact_post_path(id: contact_post.id) %></td>
+            <td><%= link_to 'Show', contact_post, :class => 'link-to-text-color' %></td>
+            <td><%= link_to 'Destroy', destroy_it_contact_post_path(id: contact_post.id), :class => 'link-to-text-color' %></td>
           </tr>
         <% end %>
       </tbody>
@@ -36,5 +36,5 @@
   </div>
 <br>
 
-<%= link_to 'New Contact Post', new_contact_post_path %>
+<%= link_to 'New Contact Post', new_contact_post_path, :class => 'link-to-text-color' %>
 </section>
