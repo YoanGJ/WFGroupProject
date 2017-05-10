@@ -22,8 +22,9 @@
                       <span style="font-size:15px; font-weight: bold;"><%= gym_class.start_time %>pm to </span>
                       <span style="font-size:15px; font-weight: bold;"><%= gym_class.end_time %>pm<br><br></span>
                       <span style="font-size:15px; font-weight: bold; float:right;">starting date: <%= gym_class.starting_date %></span>
-                        <div class="button_class">Book Now</div>
-                          <!--redirect vers form avec comme arg gym_class.name par ex-->
+                        <%= link_to new_gym_class_path do %>
+                          <div class="button_class">Book Now</div>
+                        <% end %>
                   </ul>
 
                   <ul class="card__meta card__meta--last">
